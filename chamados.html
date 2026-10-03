@@ -1,0 +1,574 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+
+    <title>Chamados - Central de Serviços</title>
+
+    <link
+      rel="stylesheet"
+      href="./assets/css/reset.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="./assets/css/global.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="./assets/css/chamados.css"
+    />
+  </head>
+
+  <body>
+    <header class="cabecalho">
+      <div class="container">
+        <div class="cabecalho-conteudo">
+          <div class="identidade">
+            <h1>Central de Serviços</h1>
+
+            <p>Suporte e atendimento de tecnologia</p>
+          </div>
+
+          <nav
+            class="menu"
+            aria-label="Navegação principal"
+          >
+            <ul>
+              <li>
+                <a href="./index.html">
+                  Início
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="./chamados.html"
+                  class="ativo"
+                >
+                  Chamados
+                </a>
+              </li>
+
+              <li>
+                <a href="./abrir-chamado.html">
+                  Abrir chamado
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="pagina-chamados">
+        <div class="container">
+          <div class="titulo-pagina">
+            <p class="subtitulo">
+              CENTRAL DE ATENDIMENTO
+            </p>
+
+            <h2>Pesquisa de chamados</h2>
+
+            <p>
+              Consulte os chamados registrados na Central
+              de Serviços.
+            </p>
+          </div>
+
+          <section
+            class="indicadores"
+            aria-label="Resumo dos chamados"
+          >
+            <article class="indicador">
+              <span class="indicador-numero">
+                4
+              </span>
+
+              <span class="indicador-label">
+                Chamados abertos
+              </span>
+            </article>
+
+            <article class="indicador">
+              <span class="indicador-numero">
+                2
+              </span>
+
+              <span class="indicador-label">
+                Chamados pendentes
+              </span>
+            </article>
+
+            <article class="indicador">
+              <span class="indicador-numero">
+                8
+              </span>
+
+              <span class="indicador-label">
+                Chamados concluídos
+              </span>
+            </article>
+          </section>
+
+          <section class="filtros">
+            <h3>Pesquisar chamados</h3>
+
+            <form>
+              <div class="campo campo-palavra">
+                <label for="palavra-chave">
+                  Palavra-chave
+                </label>
+
+                <input
+                  type="search"
+                  id="palavra-chave"
+                  name="palavra-chave"
+                  placeholder="Digite uma palavra-chave"
+                />
+              </div>
+
+              <div class="campo">
+                <label for="categoria">
+                  Categoria
+                </label>
+
+                <select
+                  id="categoria"
+                  name="categoria"
+                >
+                  <option value="">
+                    Todas as categorias
+                  </option>
+
+                  <option value="hardware">
+                    Hardware
+                  </option>
+
+                  <option value="rede">
+                    Redes
+                  </option>
+
+                  <option value="software">
+                    Software
+                  </option>
+
+                  <option value="acesso">
+                    Acesso
+                  </option>
+                </select>
+              </div>
+
+              <div class="campo">
+                <label for="prioridade">
+                  Prioridade
+                </label>
+
+                <select
+                  id="prioridade"
+                  name="prioridade"
+                >
+                  <option value="">
+                    Todas as prioridades
+                  </option>
+
+                  <option value="baixa">
+                    Baixa
+                  </option>
+
+                  <option value="media">
+                    Média
+                  </option>
+
+                  <option value="alta">
+                    Alta
+                  </option>
+
+                  <option value="urgente">
+                    Urgente
+                  </option>
+                </select>
+              </div>
+
+              <div class="campo">
+                <label for="status">
+                  Status
+                </label>
+
+                <select
+                  id="status"
+                  name="status"
+                >
+                  <option value="">
+                    Todos os status
+                  </option>
+
+                  <option value="aberto">
+                    Aberto
+                  </option>
+
+                  <option value="pendente">
+                    Pendente
+                  </option>
+
+                  <option value="concluido">
+                    Concluído
+                  </option>
+                </select>
+              </div>
+
+              <div class="campo">
+                <label for="data-inicial">
+                  Data inicial
+                </label>
+
+                <input
+                  type="date"
+                  id="data-inicial"
+                  name="data-inicial"
+                />
+              </div>
+
+              <div class="campo">
+                <label for="data-final">
+                  Data final
+                </label>
+
+                <input
+                  type="date"
+                  id="data-final"
+                  name="data-final"
+                />
+              </div>
+
+              <div class="campo">
+                <label for="horario">
+                  Horário
+                </label>
+
+                <input
+                  type="time"
+                  id="horario"
+                  name="horario"
+                />
+              </div>
+
+              <div class="botoes-filtro">
+                <button
+                  type="reset"
+                  class="botao-secundario"
+                >
+                  Limpar filtros
+                </button>
+
+                <button
+                  type="submit"
+                  class="botao"
+                >
+                  Pesquisar
+                </button>
+              </div>
+            </form>
+          </section>
+
+          <section class="lista-chamados">
+            <div class="lista-cabecalho">
+              <h3>Chamados encontrados</h3>
+
+              <span>
+                6 chamados exibidos
+              </span>
+            </div>
+
+            <div class="chamados">
+              <article class="chamado">
+                <div class="chamado-topo">
+                  <span class="numero-chamado">
+                    #0001
+                  </span>
+
+                  <span
+                    class="status status-aberto"
+                  >
+                    Aberto
+                  </span>
+                </div>
+
+                <h4>
+                  Computador não liga
+                </h4>
+
+                <div class="dados-chamado">
+                  <span>
+                    <strong>Categoria:</strong>
+                    Hardware
+                  </span>
+
+                  <span>
+                    <strong>Prioridade:</strong>
+                    Alta
+                  </span>
+
+                  <span>
+                    <strong>Solicitante:</strong>
+                    Ana Souza
+                  </span>
+
+                  <span>
+                    <strong>Data:</strong>
+                    02/10/2026
+                  </span>
+
+                  <span>
+                    <strong>Hora:</strong>
+                    08:30
+                  </span>
+                </div>
+              </article>
+
+              <article class="chamado">
+                <div class="chamado-topo">
+                  <span class="numero-chamado">
+                    #0002
+                  </span>
+
+                  <span
+                    class="status status-pendente"
+                  >
+                    Pendente
+                  </span>
+                </div>
+
+                <h4>
+                  Internet sem conexão
+                </h4>
+
+                <div class="dados-chamado">
+                  <span>
+                    <strong>Categoria:</strong>
+                    Redes
+                  </span>
+
+                  <span>
+                    <strong>Prioridade:</strong>
+                    Alta
+                  </span>
+
+                  <span>
+                    <strong>Solicitante:</strong>
+                    Pedro Lima
+                  </span>
+
+                  <span>
+                    <strong>Data:</strong>
+                    02/10/2026
+                  </span>
+
+                  <span>
+                    <strong>Hora:</strong>
+                    09:15
+                  </span>
+                </div>
+              </article>
+
+              <article class="chamado">
+                <div class="chamado-topo">
+                  <span class="numero-chamado">
+                    #0003
+                  </span>
+
+                  <span
+                    class="status status-concluido"
+                  >
+                    Concluído
+                  </span>
+                </div>
+
+                <h4>
+                  Instalação de aplicativo
+                </h4>
+
+                <div class="dados-chamado">
+                  <span>
+                    <strong>Categoria:</strong>
+                    Software
+                  </span>
+
+                  <span>
+                    <strong>Prioridade:</strong>
+                    Média
+                  </span>
+
+                  <span>
+                    <strong>Solicitante:</strong>
+                    Carla Mendes
+                  </span>
+
+                  <span>
+                    <strong>Data:</strong>
+                    01/10/2026
+                  </span>
+
+                  <span>
+                    <strong>Hora:</strong>
+                    10:00
+                  </span>
+                </div>
+              </article>
+
+              <article class="chamado">
+                <div class="chamado-topo">
+                  <span class="numero-chamado">
+                    #0004
+                  </span>
+
+                  <span
+                    class="status status-aberto"
+                  >
+                    Aberto
+                  </span>
+                </div>
+
+                <h4>
+                  Solicitação de acesso ao sistema
+                </h4>
+
+                <div class="dados-chamado">
+                  <span>
+                    <strong>Categoria:</strong>
+                    Acesso
+                  </span>
+
+                  <span>
+                    <strong>Prioridade:</strong>
+                    Média
+                  </span>
+
+                  <span>
+                    <strong>Solicitante:</strong>
+                    Lucas Oliveira
+                  </span>
+
+                  <span>
+                    <strong>Data:</strong>
+                    01/10/2026
+                  </span>
+
+                  <span>
+                    <strong>Hora:</strong>
+                    13:20
+                  </span>
+                </div>
+              </article>
+
+              <article class="chamado">
+                <div class="chamado-topo">
+                  <span class="numero-chamado">
+                    #0005
+                  </span>
+
+                  <span
+                    class="status status-pendente"
+                  >
+                    Pendente
+                  </span>
+                </div>
+
+                <h4>
+                  Impressora não está funcionando
+                </h4>
+
+                <div class="dados-chamado">
+                  <span>
+                    <strong>Categoria:</strong>
+                    Hardware
+                  </span>
+
+                  <span>
+                    <strong>Prioridade:</strong>
+                    Baixa
+                  </span>
+
+                  <span>
+                    <strong>Solicitante:</strong>
+                    Mariana Costa
+                  </span>
+
+                  <span>
+                    <strong>Data:</strong>
+                    30/09/2026
+                  </span>
+
+                  <span>
+                    <strong>Hora:</strong>
+                    14:45
+                  </span>
+                </div>
+              </article>
+
+              <article class="chamado">
+                <div class="chamado-topo">
+                  <span class="numero-chamado">
+                    #0006
+                  </span>
+
+                  <span
+                    class="status status-concluido"
+                  >
+                    Concluído
+                  </span>
+                </div>
+
+                <h4>
+                  Redefinição de senha
+                </h4>
+
+                <div class="dados-chamado">
+                  <span>
+                    <strong>Categoria:</strong>
+                    Acesso
+                  </span>
+
+                  <span>
+                    <strong>Prioridade:</strong>
+                    Baixa
+                  </span>
+
+                  <span>
+                    <strong>Solicitante:</strong>
+                    João Almeida
+                  </span>
+
+                  <span>
+                    <strong>Data:</strong>
+                    30/09/2026
+                  </span>
+
+                  <span>
+                    <strong>Hora:</strong>
+                    16:10
+                  </span>
+                </div>
+              </article>
+            </div>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <footer class="rodape">
+      <div class="container">
+        <p>
+          Desenvolvido durante as aulas de Desenvolvimento
+          Web I.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

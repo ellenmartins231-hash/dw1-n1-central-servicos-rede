@@ -6,29 +6,218 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
-    <title>Projeto HTML e CSS</title>
+
+    <title>Central de Serviços</title>
+
     <link
       rel="stylesheet"
-      href="./css/reset.css"
+      href="./assets/css/reset.css"
     />
 
     <link
       rel="stylesheet"
-      href="./css/global.css"
+      href="./assets/css/global.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="./assets/css/index.css"
     />
   </head>
 
   <body>
-    <header>
-      <h1>Projeto HTML e CSS</h1>
+    <header class="cabecalho">
+      <div class="container">
+        <div class="cabecalho-conteudo">
+          <div class="identidade">
+            <h1>Central de Serviços</h1>
+
+            <p>Suporte e atendimento de tecnologia</p>
+          </div>
+
+          <nav
+            class="menu"
+            aria-label="Navegação principal"
+          >
+            <ul>
+              <li>
+                <a
+                  href="./index.html"
+                  class="ativo"
+                >
+                  Início
+                </a>
+              </li>
+
+              <li>
+                <a href="./chamados.html">
+                  Chamados
+                </a>
+              </li>
+
+              <li>
+                <a href="./abrir-chamado.html">
+                  Abrir chamado
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
     </header>
 
     <main>
-      <p>Substitua este conteúdo pelo conteúdo do seu projeto.</p>
+      <section class="apresentacao">
+        <div class="container">
+          <div class="apresentacao-conteudo">
+            <p class="subtitulo">
+              CENTRAL DE ATENDIMENTO
+            </p>
+
+            <h2>
+              Soluções rápidas para seus problemas de
+              tecnologia
+            </h2>
+
+            <p>
+              Encontre suporte para equipamentos, redes,
+              sistemas e acessos. Abra um chamado e nossa
+              equipe irá ajudá-lo.
+            </p>
+
+            <a
+              href="./abrir-chamado.html"
+              class="botao"
+            >
+              Solicitar suporte
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="servicos">
+        <div class="container">
+          <div class="secao-titulo">
+            <h2>Serviços disponíveis</h2>
+
+            <p>
+              Confira os principais serviços oferecidos pela
+              Central de Serviços.
+            </p>
+          </div>
+
+          <div class="cartoes-servicos">
+            <article class="cartao-servico">
+              <img
+                src="./assets/img/computador.webp"  alt=""
+              />
+
+              <div class="cartao-conteudo">
+                <span class="categoria">
+                  Hardware
+                </span>
+
+                <h3>
+                  Computadores e equipamentos
+                </h3>
+
+                <p>
+                  Suporte para computadores, periféricos e
+                  outros equipamentos de tecnologia.
+                </p>
+
+                <a href="./abrir-chamado.html">
+                  Solicitar suporte
+                </a>
+              </div>
+            </article>
+
+            <article class="cartao-servico">
+              <img
+                src="./assets/img/rede.jpeg" alt=""
+              />
+
+              <div class="cartao-conteudo">
+                <span class="categoria">
+                  Redes
+                </span>
+
+                <h3>
+                  Conectividade e rede
+                </h3>
+
+                <p>
+                  Atendimento para problemas de internet,
+                  conexão e acesso à rede.
+                </p>
+
+                <a href="./abrir-chamado.html">
+                  Solicitar suporte
+                </a>
+              </div>
+            </article>
+
+            <article class="cartao-servico">
+              <img
+                src="./assets/img/sistemas.jpeg" alt=""
+              />
+
+              <div class="cartao-conteudo">
+                <span class="categoria">
+                  Software
+                </span>
+
+                <h3>
+                  Sistemas e aplicativos
+                </h3>
+
+                <p>
+                  Auxílio com sistemas, programas,
+                  aplicativos e erros de software.
+                </p>
+
+                <a href="./abrir-chamado.html">
+                  Solicitar suporte
+                </a>
+              </div>
+            </article>
+
+            <article class="cartao-servico">
+              <img
+                src="./assets/img/acesso.png" alt=""
+              />
+
+              <div class="cartao-conteudo">
+                <span class="categoria">
+                  Acesso
+                </span>
+
+                <h3>
+                  Contas e acessos
+                </h3>
+
+                <p>
+                  Suporte para contas de usuário, senhas e
+                  permissões de acesso.
+                </p>
+
+                <a href="./abrir-chamado.html">
+                  Solicitar suporte
+                </a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
     </main>
 
-    <footer>
-      <p>Desenvolvido durante as aulas de Desenvolvimento Web.</p>
+    <footer class="rodape">
+      <div class="container">
+        <p>
+          Desenvolvido durante as aulas de Desenvolvimento
+          Web I.
+        </p>
+      </div>
     </footer>
   </body>
 </html>

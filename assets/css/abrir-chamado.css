@@ -1,0 +1,160 @@
+.pagina-formulario {
+  padding: 3rem 0;
+}
+
+.titulo-pagina {
+  margin-bottom: 2rem;
+}
+
+.titulo-pagina h2 {
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+}
+
+.titulo-pagina p:last-child {
+  color: var(--color-muted);
+}
+
+/* Formulário */
+
+.formulario-chamado {
+  padding: 2rem;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: 0.5rem;
+}
+
+.formulario-chamado fieldset {
+  margin: 0 0 2rem;
+  padding: 1.5rem;
+  border: 1px solid var(--color-border);
+  border-radius: 0.5rem;
+}
+
+.formulario-chamado legend {
+  padding: 0 0.5rem;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.campos-formulario {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+}
+
+.campo-formulario {
+  flex: 1 1 250px;
+}
+
+.campo-completo {
+  flex-basis: 100%;
+}
+
+.campo-formulario label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-weight: bold;
+}
+
+.campo-formulario input,
+.campo-formulario select,
+.campo-formulario textarea {
+  width: 100%;
+  padding: 0.75rem;
+  color: var(--color-text);
+  background-color: var(--color-white);
+  border: 1px solid #cbd5e1;
+  border-radius: 0.4rem;
+}
+
+.campo-formulario textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.campo-formulario input:focus,
+.campo-formulario select:focus,
+.campo-formulario textarea:focus {
+  outline: 2px solid #93c5fd;
+  border-color: var(--color-primary);
+}
+
+.campo-confirmacao {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  flex-basis: 100%;
+}
+
+.campo-confirmacao input {
+  width: auto;
+  margin-top: 0.3rem;
+}
+
+.campo-confirmacao label {
+  cursor: pointer;
+}
+
+/* Botões */
+
+.botoes-formulario {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+}
+
+.botoes-formulario button {
+  padding: 0.75rem 1.25rem;
+  border: 0;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.botoes-formulario .botao {
+  color: var(--color-white);
+  background-color: var(--color-primary);
+}
+
+.botoes-formulario .botao:hover {
+  background-color: var(--color-primary-dark);
+}
+
+.botoes-formulario .botao-secundario:hover {
+  background-color: #cbd5e1;
+}
+
+/* Responsividade */
+
+@media (max-width: 700px) {
+  .pagina-formulario {
+    padding: 2rem 0;
+  }
+
+  .formulario-chamado {
+    padding: 1rem;
+  }
+
+  .formulario-chamado fieldset {
+    padding: 1rem;
+  }
+
+  .campos-formulario {
+    flex-direction: column;
+  }
+
+  .campo-formulario,
+  .campo-completo {
+    width: 100%;
+    flex-basis: auto;
+  }
+
+  .botoes-formulario {
+    flex-direction: column;
+  }
+
+  .botoes-formulario button {
+    width: 100%;
+  }
+}

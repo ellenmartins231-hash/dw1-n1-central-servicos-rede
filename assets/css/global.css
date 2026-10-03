@@ -1,0 +1,144 @@
+:root {
+  --color-background: #f8fafc;
+  --color-text: #0f172a;
+  --color-primary: #2563eb;
+  --color-primary-dark: #1d4ed8;
+  --color-white: #ffffff;
+  --color-border: #e2e8f0;
+  --color-muted: #64748b;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  margin: 0;
+  color: var(--color-text);
+  background-color: var(--color-background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Cabeçalho */
+
+.cabecalho {
+  color: var(--color-white);
+  background-color: #0f172a;
+}
+
+.cabecalho-conteudo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 1.25rem 0;
+}
+
+.identidade h1 {
+  font-size: 1.4rem;
+}
+
+.identidade p {
+  margin-top: 0.2rem;
+  color: #cbd5e1;
+  font-size: 0.85rem;
+}
+
+.menu ul {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.menu a {
+  display: block;
+  padding: 0.6rem 0.9rem;
+  border-radius: 0.4rem;
+  color: #e2e8f0;
+}
+
+.menu a:hover,
+.menu a.ativo {
+  color: var(--color-white);
+  background-color: var(--color-primary);
+}
+
+/* Botões */
+
+.botao {
+  display: inline-block;
+  padding: 0.8rem 1.3rem;
+  color: var(--color-white);
+  background-color: var(--color-primary);
+  border: 0;
+  border-radius: 0.4rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.botao:hover {
+  background-color: var(--color-primary-dark);
+}
+
+/* Rodapé */
+
+.rodape {
+  margin-top: 4rem;
+  padding: 1.5rem 0;
+  color: var(--color-muted);
+  background-color: var(--color-white);
+  border-top: 1px solid var(--color-border);
+}
+
+.rodape p {
+  text-align: center;
+}
+
+/* Responsividade */
+
+@media (max-width: 700px) {
+  .cabecalho-conteudo {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu {
+    width: 100%;
+  }
+
+  .menu ul {
+    flex-direction: column;
+  }
+
+  .menu a {
+    text-align: center;
+  }
+}
